@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="sTituloDialogo1">Usuario no existente</string>
+    <string name="sMensajeDialogo1">¿Queres crear un usuario para utilizar en la aplicación?</string>
+    <string name="sBtnDialogo1Aceptar">crearlo</string>
+    <string name="sBtnDialogo1Cancelar">volver</string>
+</resources>
