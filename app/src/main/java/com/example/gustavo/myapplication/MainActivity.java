@@ -5,8 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, MiDialogo.Notificado{
 
     Button oBtnUno;
     
@@ -18,7 +19,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         oBtnUno = (Button) findViewById(R.id.btnUno);
         oBtnUno.setOnClickListener(this);
         
-        
     }
 
     @Override
@@ -29,5 +29,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         
+    }
+
+    @Override
+    public void onPositiveButton(DialogFragment mDialog) {
+        Toast.makeText(this, "boton positivo", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onNegativeButton(DialogFragment mDialog) {
+        Toast.makeText(this, "boton negativo", Toast.LENGTH_SHORT).show();
+
     }
 }
